@@ -1,0 +1,58 @@
+\doxysection{Visitor\+Counter\+Map Class Reference}
+\hypertarget{class_visitor_counter_map}{}\label{class_visitor_counter_map}\index{VisitorCounterMap@{VisitorCounterMap}}
+
+
+{\ttfamily \#include $<$Visitor\+Counter\+Map.\+hxx$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_visitor_counter_map_aef0dffea7e41a5f7afcdbf27f3068672}{Visitor\+Counter\+Map}} (const string \&entry\+Log\+File\+Path)
+\item 
+string \mbox{\hyperlink{class_visitor_counter_map_a8f003ba9d327e0b8bcb28a1f787f5c6e}{get\+Time\+Slot\+With\+Max\+Vistors}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Analyzes visitor traffic using std\+::map.~\newline
+After constructing the \doxylink{class_visitor_counter_map}{Visitor\+Counter\+Map}, invoke the \doxylink{class_visitor_counter_map_a8f003ba9d327e0b8bcb28a1f787f5c6e}{get\+Time\+Slot\+With\+Max\+Vistors()} method to get the analysis 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_visitor_counter_map_aef0dffea7e41a5f7afcdbf27f3068672}\label{class_visitor_counter_map_aef0dffea7e41a5f7afcdbf27f3068672} 
+\index{VisitorCounterMap@{VisitorCounterMap}!VisitorCounterMap@{VisitorCounterMap}}
+\index{VisitorCounterMap@{VisitorCounterMap}!VisitorCounterMap@{VisitorCounterMap}}
+\doxysubsubsection{\texorpdfstring{VisitorCounterMap()}{VisitorCounterMap()}}
+{\footnotesize\ttfamily Visitor\+Counter\+Map\+::\+Visitor\+Counter\+Map (\begin{DoxyParamCaption}\item[{const string \&}]{entry\+Log\+File\+Path }\end{DoxyParamCaption})}
+
+Creates a \doxylink{class_visitor_counter_map}{Visitor\+Counter\+Map}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em entry\+Log\+File\+Path} & Path to the log file to be analyzed.~\newline
+The log file should have list of entry logs in the form HH\+:MM,HH\+:MM\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::string} & Error\+Message if file cannot be opened or format does not match \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_visitor_counter_map_a8f003ba9d327e0b8bcb28a1f787f5c6e}\label{class_visitor_counter_map_a8f003ba9d327e0b8bcb28a1f787f5c6e} 
+\index{VisitorCounterMap@{VisitorCounterMap}!getTimeSlotWithMaxVistors@{getTimeSlotWithMaxVistors}}
+\index{getTimeSlotWithMaxVistors@{getTimeSlotWithMaxVistors}!VisitorCounterMap@{VisitorCounterMap}}
+\doxysubsubsection{\texorpdfstring{getTimeSlotWithMaxVistors()}{getTimeSlotWithMaxVistors()}}
+{\footnotesize\ttfamily string Visitor\+Counter\+Map\+::get\+Time\+Slot\+With\+Max\+Vistors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the time slot which had maximum visitors in the format ~\newline
+{\bfseries{HH\+:MM-\/\+HH\+:MM;n}} ~\newline
+First HH\+:MM is the start time~\newline
+Second HH\+:MM is the end time~\newline
+n is the number of visitors in that time 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{_visitor_counter_map_8hxx}{Visitor\+Counter\+Map.\+hxx}}\item 
+src/\mbox{\hyperlink{_visitor_counter_map_8cxx}{Visitor\+Counter\+Map.\+cxx}}\end{DoxyCompactItemize}

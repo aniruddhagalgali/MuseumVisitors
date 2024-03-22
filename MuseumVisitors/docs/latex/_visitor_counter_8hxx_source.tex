@@ -1,0 +1,42 @@
+\doxysection{Visitor\+Counter.\+hxx}
+\hypertarget{_visitor_counter_8hxx_source}{}\label{_visitor_counter_8hxx_source}\index{src/VisitorCounter.hxx@{src/VisitorCounter.hxx}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <regex>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}EntryLogReader.hxx"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_visitor_counter}{VisitorCounter}}}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ inOutTimeDelimiter\ =\ \textcolor{charliteral}{','};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ hhMMDelim\ =\ \textcolor{charliteral}{':'};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ visitorsInMinute[1440]\ =\ \{\ 0\ \};}
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_visitor_counter_a6769422be3990617040f1765f46bb9d6}{VisitorCounter}}(\textcolor{keyword}{const}\ vector<string>\&\ logEntries);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ analyzeLogLine(\textcolor{keyword}{const}\ std::string\&\ vistorEntry);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_visitor_counter_a6769422be3990617040f1765f46bb9d6}{VisitorCounter}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ entryLogFilePath);}
+\DoxyCodeLine{00042\ \ \ \ \ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ analyzeLogLine(\textcolor{keyword}{const}\ std::string\&\ vistorEntryLogLine);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_visitor_counter}{\string~VisitorCounter}}()\ \{\};}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{string}\ getTimeSlotWithMaxVistors();}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{string}\ getTimeSlotWithMinVisitors();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,30 @@
+\doxysection{Entry\+Log\+Reader.\+hxx}
+\hypertarget{_entry_log_reader_8hxx_source}{}\label{_entry_log_reader_8hxx_source}\index{src/EntryLogReader.hxx@{src/EntryLogReader.hxx}}
+\mbox{\hyperlink{_entry_log_reader_8hxx}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <regex>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_visitor_tracker}{VisitorTracker}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_entry_log_reader}{EntryLogReader}};}
+\DoxyCodeLine{00013\ \}}
+\DoxyCodeLine{00014\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_entry_log_reader}{EntryLogReader}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_entry_log_reader_aeebaf0b8d110bafda842e4560050725b}{EntryLogReader}}(\textcolor{keywordtype}{string}\ entryLogFilePath);}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_entry_log_reader_ab2c4278c1cc493960387fde3a160af2d}{\string~EntryLogReader}}();}
+\DoxyCodeLine{00020\ \ \ \ \ vector<string>\ \mbox{\hyperlink{class_entry_log_reader_a330f6d3d128e448c795eef1b5d51d814}{getEntries}}();}
+\DoxyCodeLine{00021\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ \ \ \ \ ifstream\ entryLogFile;}
+\DoxyCodeLine{00023\ \ \ \ \ vector<string>\ entries;}
+\DoxyCodeLine{00024\ \};}
+
+\end{DoxyCode}

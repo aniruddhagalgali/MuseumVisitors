@@ -1,0 +1,78 @@
+10 entries
+2024-03-22_10:10:58.6391891:TRACE: MuseumVisitors.cpp : 25 : BEGIN:MuseumVisitors::main
+2024-03-22_10:10:58.6509559:TRACE: VisitorCounterMap.cxx : 83 : BEGIN:VisitorCounterMap::getTimeSlotWithMaxVistors
+2024-03-22_10:10:58.6513410:TRACE: VisitorCounterMap.cxx : 110 : END:VisitorCounterMap::getTimeSlotWithMaxVistors:Time taken in nanoseconds:191700
+**** The museum has maximum visitors between *** 10:13-21:23;2
+2024-03-22_10:10:58.6515226:TRACE: MuseumVisitors.cpp : 41 : END:MuseumVisitors::main:Time taken in nanoseconds:12344600
+2024-03-22_10:10:58.6516954:TRACE: MuseumVisitors.cpp : 48 : BEGIN:MuseumVisitors::main
+2024-03-22_10:10:58.6526083:TRACE: VisitorCounterArray.cxx : 83 : BEGIN:VisitorCounterArray::getTimeSlotWithMaxVistors
+2024-03-22_10:10:58.6527636:TRACE: VisitorCounterArray.cxx : 110 : END:VisitorCounterArray::getTimeSlotWithMaxVistors:Time taken in nanoseconds:17500
+**** The museum has maximum visitors between *** 10:13-21:23;2
+2024-03-22_10:10:58.6528850:TRACE: MuseumVisitors.cpp : 64 : END:MuseumVisitors::main:Time taken in nanoseconds:1184000
+10,12344600,1184000
+
+
+100 entries
+2024-03-22_10:22:44.5655638:TRACE: MuseumVisitors.cpp : 25 : BEGIN:MuseumVisitors::main
+2024-03-22_10:22:44.6988536:TRACE: VisitorCounterMap.cxx : 83 : BEGIN:VisitorCounterMap::getTimeSlotWithMaxVistors
+2024-03-22_10:22:44.7027250:TRACE: VisitorCounterMap.cxx : 110 : END:VisitorCounterMap::getTimeSlotWithMaxVistors:Time taken in nanoseconds:2110700
+**** The museum has maximum visitors between *** 15:11-15:16;43
+2024-03-22_10:22:44.7037580:TRACE: MuseumVisitors.cpp : 41 : END:MuseumVisitors::main:Time taken in nanoseconds:138146400
+2024-03-22_10:22:44.7054936:TRACE: MuseumVisitors.cpp : 48 : BEGIN:MuseumVisitors::main
+2024-03-22_10:22:44.7220186:TRACE: VisitorCounterArray.cxx : 83 : BEGIN:VisitorCounterArray::getTimeSlotWithMaxVistors
+2024-03-22_10:22:44.7229564:TRACE: VisitorCounterArray.cxx : 110 : END:VisitorCounterArray::getTimeSlotWithMaxVistors:Time taken in nanoseconds:137600
+**** The museum has maximum visitors between *** 15:11-15:16;43
+2024-03-22_10:22:44.7239695:TRACE: MuseumVisitors.cpp : 64 : END:MuseumVisitors::main:Time taken in nanoseconds:18414000
+100,138146400,18414000
+
+1000 entries
+2024-03-22_12:33:16.1135912:TRACE: MuseumVisitors.cpp : 25 : BEGIN:MuseumVisitors::main
+2024-03-22_12:33:16.4214441:TRACE: VisitorCounterMap.cxx : 83 : BEGIN:VisitorCounterMap::getTimeSlotWithMaxVistors
+2024-03-22_12:33:16.4225952:TRACE: VisitorCounterMap.cxx : 110 : END:VisitorCounterMap::getTimeSlotWithMaxVistors:Time taken in nanoseconds:503800
+**** The museum has maximum visitors between *** 15:37-15:37;398
+2024-03-22_12:33:16.4231677:TRACE: MuseumVisitors.cpp : 41 : END:MuseumVisitors::main:Time taken in nanoseconds:309593600
+2024-03-22_12:33:16.4236871:TRACE: MuseumVisitors.cpp : 48 : BEGIN:MuseumVisitors::main
+2024-03-22_12:33:16.4709957:TRACE: VisitorCounterArray.cxx : 83 : BEGIN:VisitorCounterArray::getTimeSlotWithMaxVistors
+2024-03-22_12:33:16.4718189:TRACE: VisitorCounterArray.cxx : 110 : END:VisitorCounterArray::getTimeSlotWithMaxVistors:Time taken in nanoseconds:70400
+**** The museum has maximum visitors between *** 15:37-15:37;398
+2024-03-22_12:33:16.4722008:TRACE: MuseumVisitors.cpp : 64 : END:MuseumVisitors::main:Time taken in nanoseconds:48488600
+1000,309593600,48488600
+
+10000 entries
+2024-03-22_12:29:25.2211302:TRACE: MuseumVisitors.cpp : 25 : BEGIN:MuseumVisitors::main
+2024-03-22_12:29:26.6946145:TRACE: VisitorCounterMap.cxx : 83 : BEGIN:VisitorCounterMap::getTimeSlotWithMaxVistors
+2024-03-22_12:29:26.6956358:TRACE: VisitorCounterMap.cxx : 110 : END:VisitorCounterMap::getTimeSlotWithMaxVistors:Time taken in nanoseconds:353100
+**** The museum has maximum visitors between *** 15:38-15:38;3640
+2024-03-22_12:29:26.6962964:TRACE: MuseumVisitors.cpp : 41 : END:MuseumVisitors::main:Time taken in nanoseconds:1475164900
+2024-03-22_12:29:26.6967466:TRACE: MuseumVisitors.cpp : 48 : BEGIN:MuseumVisitors::main
+2024-03-22_12:29:26.9679605:TRACE: VisitorCounterArray.cxx : 83 : BEGIN:VisitorCounterArray::getTimeSlotWithMaxVistors
+2024-03-22_12:29:26.9684123:TRACE: VisitorCounterArray.cxx : 110 : END:VisitorCounterArray::getTimeSlotWithMaxVistors:Time taken in nanoseconds:27000
+**** The museum has maximum visitors between *** 15:38-15:38;3640
+2024-03-22_12:29:26.9685604:TRACE: MuseumVisitors.cpp : 64 : END:MuseumVisitors::main:Time taken in nanoseconds:271810600
+10000,1475164900,271810600
+
+100000 entries
+2024-03-22_12:35:54.8267900:TRACE: C:\Users\galgali\source\repos\MuseumVisitors\MuseumVisitors\src\MuseumVisitors.cpp : 25 : BEGIN:MuseumVisitors::main
+2024-03-22_12:36:09.5570383:TRACE: C:\Users\galgali\source\repos\MuseumVisitors\MuseumVisitors\src\VisitorCounterMap.cxx : 83 : BEGIN:VisitorCounterMap::getTimeSlotWithMaxVistors
+2024-03-22_12:36:09.5580674:TRACE: C:\Users\galgali\source\repos\MuseumVisitors\MuseumVisitors\src\VisitorCounterMap.cxx : 110 : END:VisitorCounterMap::getTimeSlotWithMaxVistors:Time taken in nanoseconds:346000
+**** The museum has maximum visitors between *** 15:35-15:35;37083
+2024-03-22_12:36:09.5587015:TRACE: C:\Users\galgali\source\repos\MuseumVisitors\MuseumVisitors\src\MuseumVisitors.cpp : 41 : END:MuseumVisitors::main:Time taken in nanoseconds:14731921400
+2024-03-22_12:36:09.5591541:TRACE: C:\Users\galgali\source\repos\MuseumVisitors\MuseumVisitors\src\MuseumVisitors.cpp : 48 : BEGIN:MuseumVisitors::main
+2024-03-22_12:36:12.0389359:TRACE: C:\Users\galgali\source\repos\MuseumVisitors\MuseumVisitors\src\VisitorCounterArray.cxx : 83 : BEGIN:VisitorCounterArray::getTimeSlotWithMaxVistors
+2024-03-22_12:36:12.0397056:TRACE: C:\Users\galgali\source\repos\MuseumVisitors\MuseumVisitors\src\VisitorCounterArray.cxx : 110 : END:VisitorCounterArray::getTimeSlotWithMaxVistors:Time taken in nanoseconds:30200
+**** The museum has maximum visitors between *** 15:35-15:35;37083
+2024-03-22_12:36:12.0402715:TRACE: C:\Users\galgali\source\repos\MuseumVisitors\MuseumVisitors\src\MuseumVisitors.cpp : 64 : END:MuseumVisitors::main:Time taken in nanoseconds:2481103000
+100000,14731921400,2481103000
+
+1000000 entries
+2024-03-22_12:51:13.9175892:TRACE: C:\Users\galgali\source\repos\MuseumVisitors\MuseumVisitors\src\MuseumVisitors.cpp : 25 : BEGIN:MuseumVisitors::main
+2024-03-22_12:55:27.4036057:TRACE: C:\Users\galgali\source\repos\MuseumVisitors\MuseumVisitors\src\VisitorCounterMap.cxx : 83 : BEGIN:VisitorCounterMap::getTimeSlotWithMaxVistors
+2024-03-22_12:55:27.4051397:TRACE: C:\Users\galgali\source\repos\MuseumVisitors\MuseumVisitors\src\VisitorCounterMap.cxx : 110 : END:VisitorCounterMap::getTimeSlotWithMaxVistors:Time taken in nanoseconds:645300
+**** The museum has maximum visitors between *** 15:38-15:38;370722
+2024-03-22_12:55:27.4057207:TRACE: C:\Users\galgali\source\repos\MuseumVisitors\MuseumVisitors\src\MuseumVisitors.cpp : 41 : END:MuseumVisitors::main:Time taken in nanoseconds:253487967400
+2024-03-22_12:55:27.4062618:TRACE: C:\Users\galgali\source\repos\MuseumVisitors\MuseumVisitors\src\MuseumVisitors.cpp : 48 : BEGIN:MuseumVisitors::main
+2024-03-22_12:56:03.9141302:TRACE: C:\Users\galgali\source\repos\MuseumVisitors\MuseumVisitors\src\VisitorCounterArray.cxx : 83 : BEGIN:VisitorCounterArray::getTimeSlotWithMaxVistors
+2024-03-22_12:56:03.9149371:TRACE: C:\Users\galgali\source\repos\MuseumVisitors\MuseumVisitors\src\VisitorCounterArray.cxx : 110 : END:VisitorCounterArray::getTimeSlotWithMaxVistors:Time taken in nanoseconds:37900
+**** The museum has maximum visitors between *** 15:38-15:38;370722
+2024-03-22_12:56:03.9155794:TRACE: C:\Users\galgali\source\repos\MuseumVisitors\MuseumVisitors\src\MuseumVisitors.cpp : 64 : END:MuseumVisitors::main:Time taken in nanoseconds:36509116100
+1000000,253487967400,36509116100

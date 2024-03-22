@@ -1,0 +1,58 @@
+\doxysection{Visitor\+Counter\+Array Class Reference}
+\hypertarget{class_visitor_counter_array}{}\label{class_visitor_counter_array}\index{VisitorCounterArray@{VisitorCounterArray}}
+
+
+{\ttfamily \#include $<$Visitor\+Counter\+Array.\+hxx$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_visitor_counter_array_adbad4c1fc1738c831d40fabc292b5ec9}{Visitor\+Counter\+Array}} (const string \&entry\+Log\+File\+Path)
+\item 
+string \mbox{\hyperlink{class_visitor_counter_array_ad843057c73f84268566bb2a1c6061806}{get\+Time\+Slot\+With\+Max\+Vistors}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Analyzes visitor traffic using primitive arrays.~\newline
+After constructing the \doxylink{class_visitor_counter_map}{Visitor\+Counter\+Map}, invoke the \doxylink{class_visitor_counter_array_ad843057c73f84268566bb2a1c6061806}{get\+Time\+Slot\+With\+Max\+Vistors()} method to get the analysis 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_visitor_counter_array_adbad4c1fc1738c831d40fabc292b5ec9}\label{class_visitor_counter_array_adbad4c1fc1738c831d40fabc292b5ec9} 
+\index{VisitorCounterArray@{VisitorCounterArray}!VisitorCounterArray@{VisitorCounterArray}}
+\index{VisitorCounterArray@{VisitorCounterArray}!VisitorCounterArray@{VisitorCounterArray}}
+\doxysubsubsection{\texorpdfstring{VisitorCounterArray()}{VisitorCounterArray()}}
+{\footnotesize\ttfamily Visitor\+Counter\+Array\+::\+Visitor\+Counter\+Array (\begin{DoxyParamCaption}\item[{const string \&}]{entry\+Log\+File\+Path }\end{DoxyParamCaption})}
+
+Creates a \doxylink{class_visitor_counter_array}{Visitor\+Counter\+Array}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em entry\+Log\+File\+Path} & Path to the log file to be analyzed .~\newline
+The log file should have list of entry logs in the form HH\+:MM,HH\+:MM\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::string} & Error\+Message if file cannot be opened or format does not match \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_visitor_counter_array_ad843057c73f84268566bb2a1c6061806}\label{class_visitor_counter_array_ad843057c73f84268566bb2a1c6061806} 
+\index{VisitorCounterArray@{VisitorCounterArray}!getTimeSlotWithMaxVistors@{getTimeSlotWithMaxVistors}}
+\index{getTimeSlotWithMaxVistors@{getTimeSlotWithMaxVistors}!VisitorCounterArray@{VisitorCounterArray}}
+\doxysubsubsection{\texorpdfstring{getTimeSlotWithMaxVistors()}{getTimeSlotWithMaxVistors()}}
+{\footnotesize\ttfamily string Visitor\+Counter\+Array\+::get\+Time\+Slot\+With\+Max\+Vistors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the time slot which had maximum visitors in the format ~\newline
+{\bfseries{HH\+:MM-\/\+HH\+:MM;n}} ~\newline
+First HH\+:MM is the start time~\newline
+Second HH\+:MM is the end time~\newline
+n is the number of visitors in that time 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{_visitor_counter_array_8hxx}{Visitor\+Counter\+Array.\+hxx}}\item 
+src/\mbox{\hyperlink{_visitor_counter_array_8cxx}{Visitor\+Counter\+Array.\+cxx}}\end{DoxyCompactItemize}

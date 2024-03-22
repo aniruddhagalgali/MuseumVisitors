@@ -1,0 +1,78 @@
+\doxysection{src/\+Logger.hxx File Reference}
+\hypertarget{_logger_8hxx}{}\label{_logger_8hxx}\index{src/Logger.hxx@{src/Logger.hxx}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_logger}{Logger}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{_logger_8hxx_aca1fd1d8935433e6ba2e3918214e07f9}{Log\+Level}} \{ \newline
+\mbox{\hyperlink{_logger_8hxx_aca1fd1d8935433e6ba2e3918214e07f9a2d3e4144aa384b18849ab9a8abad74d6}{TRACE}}
+, \mbox{\hyperlink{_logger_8hxx_aca1fd1d8935433e6ba2e3918214e07f9adc30ec20708ef7b0f641ef78b7880a15}{DEBUG}}
+, \mbox{\hyperlink{_logger_8hxx_aca1fd1d8935433e6ba2e3918214e07f9a551b723eafd6a31d444fcb2f5920fbd3}{INFO}}
+, \mbox{\hyperlink{_logger_8hxx_aca1fd1d8935433e6ba2e3918214e07f9a32bd8a1db2275458673903bdb84cb277}{WARN}}
+, \newline
+\mbox{\hyperlink{_logger_8hxx_aca1fd1d8935433e6ba2e3918214e07f9abb1ca97ec761fc37101737ba0aa2e7c5}{ERROR}}
+, \mbox{\hyperlink{_logger_8hxx_aca1fd1d8935433e6ba2e3918214e07f9a99cd1c61610c76a57cb8d10d6df6b870}{CRITICAL}}
+ \}
+\item 
+enum class \mbox{\hyperlink{_logger_8hxx_adf578f1f74fc338f25db96a12fdd8543}{Log\+Output}} \{ \mbox{\hyperlink{_logger_8hxx_adf578f1f74fc338f25db96a12fdd8543a4695859f52d337ca3d7020b2c8f7882a}{CONSOLE}}
+, \mbox{\hyperlink{_logger_8hxx_adf578f1f74fc338f25db96a12fdd8543a9fc5887c030f7a3e19821ebec457e719}{FILE}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{_logger_8hxx_aca1fd1d8935433e6ba2e3918214e07f9}\label{_logger_8hxx_aca1fd1d8935433e6ba2e3918214e07f9} 
+\index{Logger.hxx@{Logger.hxx}!LogLevel@{LogLevel}}
+\index{LogLevel@{LogLevel}!Logger.hxx@{Logger.hxx}}
+\doxysubsubsection{\texorpdfstring{LogLevel}{LogLevel}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{_logger_8hxx_aca1fd1d8935433e6ba2e3918214e07f9}{Log\+Level}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TRACE@{TRACE}!Logger.hxx@{Logger.hxx}}\index{Logger.hxx@{Logger.hxx}!TRACE@{TRACE}}}\Hypertarget{_logger_8hxx_aca1fd1d8935433e6ba2e3918214e07f9a2d3e4144aa384b18849ab9a8abad74d6}\label{_logger_8hxx_aca1fd1d8935433e6ba2e3918214e07f9a2d3e4144aa384b18849ab9a8abad74d6} 
+TRACE&Captures the finest details of application behavior, making it ideal for deep debugging. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEBUG@{DEBUG}!Logger.hxx@{Logger.hxx}}\index{Logger.hxx@{Logger.hxx}!DEBUG@{DEBUG}}}\Hypertarget{_logger_8hxx_aca1fd1d8935433e6ba2e3918214e07f9adc30ec20708ef7b0f641ef78b7880a15}\label{_logger_8hxx_aca1fd1d8935433e6ba2e3918214e07f9adc30ec20708ef7b0f641ef78b7880a15} 
+DEBUG&Focuses on information beneficial for regular debugging scenarios. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INFO@{INFO}!Logger.hxx@{Logger.hxx}}\index{Logger.hxx@{Logger.hxx}!INFO@{INFO}}}\Hypertarget{_logger_8hxx_aca1fd1d8935433e6ba2e3918214e07f9a551b723eafd6a31d444fcb2f5920fbd3}\label{_logger_8hxx_aca1fd1d8935433e6ba2e3918214e07f9a551b723eafd6a31d444fcb2f5920fbd3} 
+INFO&Offers an overview rather than an in -\/ depth analysis. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WARN@{WARN}!Logger.hxx@{Logger.hxx}}\index{Logger.hxx@{Logger.hxx}!WARN@{WARN}}}\Hypertarget{_logger_8hxx_aca1fd1d8935433e6ba2e3918214e07f9a32bd8a1db2275458673903bdb84cb277}\label{_logger_8hxx_aca1fd1d8935433e6ba2e3918214e07f9a32bd8a1db2275458673903bdb84cb277} 
+WARN&Flag potential problematic behaviors or outcomes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ERROR@{ERROR}!Logger.hxx@{Logger.hxx}}\index{Logger.hxx@{Logger.hxx}!ERROR@{ERROR}}}\Hypertarget{_logger_8hxx_aca1fd1d8935433e6ba2e3918214e07f9abb1ca97ec761fc37101737ba0aa2e7c5}\label{_logger_8hxx_aca1fd1d8935433e6ba2e3918214e07f9abb1ca97ec761fc37101737ba0aa2e7c5} 
+ERROR&Flag problematic behaviors or outcomes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CRITICAL@{CRITICAL}!Logger.hxx@{Logger.hxx}}\index{Logger.hxx@{Logger.hxx}!CRITICAL@{CRITICAL}}}\Hypertarget{_logger_8hxx_aca1fd1d8935433e6ba2e3918214e07f9a99cd1c61610c76a57cb8d10d6df6b870}\label{_logger_8hxx_aca1fd1d8935433e6ba2e3918214e07f9a99cd1c61610c76a57cb8d10d6df6b870} 
+CRITICAL&Flag critical errors. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{_logger_8hxx_adf578f1f74fc338f25db96a12fdd8543}\label{_logger_8hxx_adf578f1f74fc338f25db96a12fdd8543} 
+\index{Logger.hxx@{Logger.hxx}!LogOutput@{LogOutput}}
+\index{LogOutput@{LogOutput}!Logger.hxx@{Logger.hxx}}
+\doxysubsubsection{\texorpdfstring{LogOutput}{LogOutput}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{_logger_8hxx_adf578f1f74fc338f25db96a12fdd8543}{Log\+Output}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CONSOLE@{CONSOLE}!Logger.hxx@{Logger.hxx}}\index{Logger.hxx@{Logger.hxx}!CONSOLE@{CONSOLE}}}\Hypertarget{_logger_8hxx_adf578f1f74fc338f25db96a12fdd8543a4695859f52d337ca3d7020b2c8f7882a}\label{_logger_8hxx_adf578f1f74fc338f25db96a12fdd8543a4695859f52d337ca3d7020b2c8f7882a} 
+CONSOLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FILE@{FILE}!Logger.hxx@{Logger.hxx}}\index{Logger.hxx@{Logger.hxx}!FILE@{FILE}}}\Hypertarget{_logger_8hxx_adf578f1f74fc338f25db96a12fdd8543a9fc5887c030f7a3e19821ebec457e719}\label{_logger_8hxx_adf578f1f74fc338f25db96a12fdd8543a9fc5887c030f7a3e19821ebec457e719} 
+FILE&\\
+\hline
+
+\end{DoxyEnumFields}

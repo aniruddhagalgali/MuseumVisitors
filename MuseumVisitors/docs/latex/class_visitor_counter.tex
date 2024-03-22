@@ -1,0 +1,78 @@
+\doxysection{Visitor\+Counter Class Reference}
+\hypertarget{class_visitor_counter}{}\label{class_visitor_counter}\index{VisitorCounter@{VisitorCounter}}
+
+
+A Visitor Counter class.  
+
+
+
+
+{\ttfamily \#include $<$Visitor\+Counter.\+hxx$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_visitor_counter_a6769422be3990617040f1765f46bb9d6}{Visitor\+Counter}} (const vector$<$ string $>$ \&log\+Entries)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\Hypertarget{class_visitor_counter_a05e5f5eee6bb1dc1b251e871ca93b0e5}\label{class_visitor_counter_a05e5f5eee6bb1dc1b251e871ca93b0e5} 
+void {\bfseries analyze\+Log\+Line} (const std\+::string \&vistor\+Entry)
+\item 
+\mbox{\hyperlink{class_visitor_counter_a07bcaa27951736fca943a3bad3d2fee5}{Visitor\+Counter}} (const string \&entry\+Log\+File\+Path)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\Hypertarget{class_visitor_counter_a770f986e9df43056ee4eb209f57def4e}\label{class_visitor_counter_a770f986e9df43056ee4eb209f57def4e} 
+void {\bfseries analyze\+Log\+Line} (const std\+::string \&vistor\+Entry\+Log\+Line)
+\item 
+\Hypertarget{class_visitor_counter_a06d212c79aefcff0f88271d2978aafec}\label{class_visitor_counter_a06d212c79aefcff0f88271d2978aafec} 
+string {\bfseries get\+Time\+Slot\+With\+Max\+Vistors} ()
+\item 
+\Hypertarget{class_visitor_counter_ad51710a752cc42f0bf42728e555182f1}\label{class_visitor_counter_ad51710a752cc42f0bf42728e555182f1} 
+string {\bfseries get\+Time\+Slot\+With\+Min\+Visitors} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A Visitor Counter class. 
+
+Analyzes the visitors to Museum. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_visitor_counter_a6769422be3990617040f1765f46bb9d6}\label{class_visitor_counter_a6769422be3990617040f1765f46bb9d6} 
+\index{VisitorCounter@{VisitorCounter}!VisitorCounter@{VisitorCounter}}
+\index{VisitorCounter@{VisitorCounter}!VisitorCounter@{VisitorCounter}}
+\doxysubsubsection{\texorpdfstring{VisitorCounter()}{VisitorCounter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Visitor\+Counter\+::\+Visitor\+Counter (\begin{DoxyParamCaption}\item[{const vector$<$ string $>$ \&}]{log\+Entries }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Creates a \doxylink{class_visitor_counter}{Visitor\+Counter}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em log\+Entries} & A vector of entry logs in the form HH\+:MM,HH\+:MM \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_visitor_counter_a07bcaa27951736fca943a3bad3d2fee5}\label{class_visitor_counter_a07bcaa27951736fca943a3bad3d2fee5} 
+\index{VisitorCounter@{VisitorCounter}!VisitorCounter@{VisitorCounter}}
+\index{VisitorCounter@{VisitorCounter}!VisitorCounter@{VisitorCounter}}
+\doxysubsubsection{\texorpdfstring{VisitorCounter()}{VisitorCounter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Visitor\+Counter\+::\+Visitor\+Counter (\begin{DoxyParamCaption}\item[{const string \&}]{entry\+Log\+File\+Path }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Creates a \doxylink{class_visitor_counter}{Visitor\+Counter}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em entry\+Log\+File\+Path} & Path to the log file having a list of entry logs in the form HH\+:MM,HH\+:MM \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Visitor\+Counter.\+hxx\item 
+src/Visitor\+Counter.\+cxx\end{DoxyCompactItemize}

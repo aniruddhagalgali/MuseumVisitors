@@ -1,0 +1,28 @@
+\doxysection{Visitor\+Counter\+Map.\+hxx}
+\hypertarget{_visitor_counter_map_8hxx_source}{}\label{_visitor_counter_map_8hxx_source}\index{src/VisitorCounterMap.hxx@{src/VisitorCounterMap.hxx}}
+\mbox{\hyperlink{_visitor_counter_map_8hxx}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <regex>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_visitor_counter_map}{VisitorCounterMap}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ inOutTimeDelimiter\ =\ \textcolor{charliteral}{','};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ hhMMDelim\ =\ \textcolor{charliteral}{':'};}
+\DoxyCodeLine{00020\ \ \ \ \ map<int,int>\ visitorsInMinute;}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ analyzeLogLine(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ vistorEntryLogLine);}
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_visitor_counter_map_aef0dffea7e41a5f7afcdbf27f3068672}{VisitorCounterMap}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ entryLogFilePath);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_visitor_counter_map_a8f003ba9d327e0b8bcb28a1f787f5c6e}{getTimeSlotWithMaxVistors}}();}
+\DoxyCodeLine{00041\ \};}
+
+\end{DoxyCode}

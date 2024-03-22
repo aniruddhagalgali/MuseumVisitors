@@ -1,0 +1,26 @@
+\doxysection{Visitor\+Counter\+Array.\+hxx}
+\hypertarget{_visitor_counter_array_8hxx_source}{}\label{_visitor_counter_array_8hxx_source}\index{src/VisitorCounterArray.hxx@{src/VisitorCounterArray.hxx}}
+\mbox{\hyperlink{_visitor_counter_array_8hxx}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <regex>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_visitor_counter_array}{VisitorCounterArray}}}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ inOutTimeDelimiter\ =\ \textcolor{charliteral}{','};}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ hhMMDelim\ =\ \textcolor{charliteral}{':'};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ visitorsInMinute[1440]\ =\ \{\ 0\ \};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ analyzeLogLine(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ vistorEntryLogLine);}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_visitor_counter_array_adbad4c1fc1738c831d40fabc292b5ec9}{VisitorCounterArray}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ entryLogFilePath);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_visitor_counter_array_ad843057c73f84268566bb2a1c6061806}{getTimeSlotWithMaxVistors}}();}
+\DoxyCodeLine{00039\ \};}
+
+\end{DoxyCode}

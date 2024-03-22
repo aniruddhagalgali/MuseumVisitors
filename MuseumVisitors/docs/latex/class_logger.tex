@@ -1,0 +1,68 @@
+\doxysection{Logger Class Reference}
+\hypertarget{class_logger}{}\label{class_logger}\index{Logger@{Logger}}
+
+
+{\ttfamily \#include $<$Logger.\+hxx$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_logger_ae5e0fc1ada25a20a1d62672db2cd9948}{log}} (\mbox{\hyperlink{_logger_8hxx_aca1fd1d8935433e6ba2e3918214e07f9}{Log\+Level}} message\+Level, std\+::string code\+File, int code\+Line, std\+::string message)
+\item 
+void \mbox{\hyperlink{class_logger_a76962587ace804ef14f24f7220a4a688}{set\+Log\+Level}} (\mbox{\hyperlink{_logger_8hxx_aca1fd1d8935433e6ba2e3918214e07f9}{Log\+Level}} log\+Level)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_logger}{Logger}} $>$ \mbox{\hyperlink{class_logger_a442b6ba0c1b4004f5e9529135a462e72}{get\+Logger}} ()
+\begin{DoxyCompactList}\small\item\em Gets the singleton \doxylink{class_logger}{Logger} instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_logger}{Logger} class. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_logger_a442b6ba0c1b4004f5e9529135a462e72}\label{class_logger_a442b6ba0c1b4004f5e9529135a462e72} 
+\index{Logger@{Logger}!getLogger@{getLogger}}
+\index{getLogger@{getLogger}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{getLogger()}{getLogger()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_logger}{Logger}} $>$ Logger\+::get\+Logger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the singleton \doxylink{class_logger}{Logger} instance. 
+
+\Hypertarget{class_logger_ae5e0fc1ada25a20a1d62672db2cd9948}\label{class_logger_ae5e0fc1ada25a20a1d62672db2cd9948} 
+\index{Logger@{Logger}!log@{log}}
+\index{log@{log}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily void Logger\+::log (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_logger_8hxx_aca1fd1d8935433e6ba2e3918214e07f9}{Log\+Level}}}]{message\+Level,  }\item[{std\+::string}]{code\+File,  }\item[{int}]{code\+Line,  }\item[{std\+::string}]{message }\end{DoxyParamCaption})}
+
+Logs the given message if the current Log\+Level is at least the message\+Level. Log\+Level can be changed using \doxylink{class_logger_a76962587ace804ef14f24f7220a4a688}{set\+Log\+Level()} 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em message\+Level} & Log Level \\
+\hline
+\mbox{\texttt{ in}}  & {\em code\+File} & {\bfseries{FILE}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em code\+Line} & {\bfseries{LINE}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em message} & Log Message \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_logger_a76962587ace804ef14f24f7220a4a688}\label{class_logger_a76962587ace804ef14f24f7220a4a688} 
+\index{Logger@{Logger}!setLogLevel@{setLogLevel}}
+\index{setLogLevel@{setLogLevel}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{setLogLevel()}{setLogLevel()}}
+{\footnotesize\ttfamily void Logger\+::set\+Log\+Level (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_logger_8hxx_aca1fd1d8935433e6ba2e3918214e07f9}{Log\+Level}}}]{log\+Level }\end{DoxyParamCaption})}
+
+Sets the log level 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em log\+Level} & The desired log level. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{_logger_8hxx}{Logger.\+hxx}}\item 
+src/\mbox{\hyperlink{_logger_8cxx}{Logger.\+cxx}}\end{DoxyCompactItemize}
