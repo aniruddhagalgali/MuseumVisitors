@@ -53,6 +53,8 @@ void VisitorCounterMap::analyzeLogLine(const string& vistorEntry)
 
 VisitorCounterMap::VisitorCounterMap(const string& entryLogFilePath)
 {
+	Logger::getLogger()->log(LogLevel::TRACE, __FILE__, __LINE__, "BEGIN:VisitorCounterMap::VisitorCounterMap");
+	auto started = chrono::high_resolution_clock::now();
 	ifstream entryLogFile;
 	entryLogFile.open(entryLogFilePath, ios::in);
 	if (entryLogFile.is_open())
@@ -76,6 +78,12 @@ VisitorCounterMap::VisitorCounterMap(const string& entryLogFilePath)
 		throw "Cannot open " + entryLogFilePath;
 	}
 	entryLogFile.close();
+	auto done = chrono::high_resolution_clock::now();
+	auto duration = chrono::duration_cast<chrono::nanoseconds>(done - started);
+	stringstream ss;
+	ss << "END:VisitorCounterMap::VisitorCounterMap:Time taken in nanoseconds:" << duration.count();
+	string logMsg = ss.str();
+	Logger::getLogger()->log(LogLevel::TRACE, __FILE__, __LINE__, logMsg);
 }
 
 string VisitorCounterMap::getTimeSlotWithMaxVistors()

@@ -2,6 +2,8 @@
 #include "VisitorCounterArray.hxx"
 
 #include <fstream>
+#include <vector>
+#include <map>
 
 using namespace std;
 
@@ -53,6 +55,8 @@ void VisitorCounterArray::analyzeLogLine(const string& vistorEntry)
 
 VisitorCounterArray::VisitorCounterArray(const string& entryLogFilePath)
 {
+	Logger::getLogger()->log(LogLevel::TRACE, __FILE__, __LINE__, "BEGIN:VisitorCounterArray::VisitorCounterArray");
+	auto started = chrono::high_resolution_clock::now();
 	ifstream entryLogFile;
 	entryLogFile.open(entryLogFilePath, ios::in);
 	if (entryLogFile.is_open())
@@ -76,6 +80,12 @@ VisitorCounterArray::VisitorCounterArray(const string& entryLogFilePath)
 		throw "Cannot open " + entryLogFilePath;
 	}
 	entryLogFile.close();
+	auto done = chrono::high_resolution_clock::now();
+	auto duration = chrono::duration_cast<chrono::nanoseconds>(done - started);
+	stringstream ss;
+	ss << "END:VisitorCounterArray::VisitorCounterArray:Time taken in nanoseconds:" << duration.count();
+	string logMsg = ss.str();
+	Logger::getLogger()->log(LogLevel::TRACE, __FILE__, __LINE__, logMsg);
 }
 
 string VisitorCounterArray::getTimeSlotWithMaxVistors()
@@ -83,9 +93,10 @@ string VisitorCounterArray::getTimeSlotWithMaxVistors()
 	Logger::getLogger()->log(LogLevel::TRACE, __FILE__, __LINE__, "BEGIN:VisitorCounterArray::getTimeSlotWithMaxVistors");
 	auto started = chrono::high_resolution_clock::now();
 
-	int maxVisitors = 0;
+	int maxVisitors = visitorsInMinute[0];
 	int maxVisitorsStartTime = 0;
 	int maxVisitorsEndTime = 0;
+	map<int,vector<pair<int, int>>> maxVisitorsMap;
 	for (int i = 0; i < 1440; i++)
 	{
 		if (visitorsInMinute[i] > maxVisitors)
@@ -94,14 +105,42 @@ string VisitorCounterArray::getTimeSlotWithMaxVistors()
 			maxVisitorsStartTime = i;
 			maxVisitorsEndTime = i;
 		}
-		if (visitorsInMinute[i] == maxVisitors)
+		else if (visitorsInMinute[i] == maxVisitors)
 		{
+			if ((i > 0) && (visitorsInMinute[i] != visitorsInMinute[i - 1]))
+			{
+				if (maxVisitorsMap.find(maxVisitors) != maxVisitorsMap.end())
+				{
+					maxVisitorsMap[maxVisitors].emplace_back(make_pair(maxVisitorsStartTime, maxVisitorsEndTime));
+				}
+				else
+				{
+					vector<pair<int, int>> maxVisitorsVector;
+					maxVisitorsVector.emplace_back(make_pair(maxVisitorsStartTime, maxVisitorsEndTime));
+					maxVisitorsMap[maxVisitors] = maxVisitorsVector;
+				}
+				maxVisitorsStartTime = i;
+			}
 			maxVisitorsEndTime = i;
 		}
 	}
+
+	// Last occurence of maxVisitors was only 1
+	if (maxVisitorsMap.find(maxVisitors) != maxVisitorsMap.end())
+	{
+		maxVisitorsMap[maxVisitors].emplace_back(make_pair(maxVisitorsStartTime, maxVisitorsEndTime));
+	}
+	else
+	{
+		vector<pair<int, int>> maxVisitorsVector;
+		maxVisitorsVector.emplace_back(make_pair(maxVisitorsStartTime, maxVisitorsEndTime));
+		maxVisitorsMap[maxVisitors] = maxVisitorsVector;
+	}
 	stringstream ssReturnValue;
-	ssReturnValue << convert_to_HHMM(maxVisitorsStartTime) << "-" << convert_to_HHMM(maxVisitorsEndTime) << ";" << maxVisitors;
-	
+	for (auto entry : maxVisitorsMap.rbegin()->second)
+	{
+		ssReturnValue << endl << convert_to_HHMM(entry.first) << "-" << convert_to_HHMM(entry.second) << ";" << maxVisitorsMap.rbegin()->first;
+	}
 	auto done = chrono::high_resolution_clock::now();
 	auto duration = chrono::duration_cast<chrono::nanoseconds>(done - started);
 	stringstream ss;
